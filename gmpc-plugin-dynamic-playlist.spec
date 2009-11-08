@@ -2,7 +2,7 @@
 Summary:	Add similar songs to playlist
 Name:		gmpc-plugin-dynamic-playlist
 Version:	0.19.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://bitbucket.org/misery/dynamic-playlist/downloads/%{source_name}-%{version}.tar.gz
@@ -25,7 +25,8 @@ If no similar song is found - a random one will be added.
 %setup -qn %{source_name}-%{version}
 
 %build
-cmake CMakeLists.txt
+%cmake \
+	-DCMAKE_INSTALL_PREFIX=%{_prefix}
 %{__make}
 
 %install
