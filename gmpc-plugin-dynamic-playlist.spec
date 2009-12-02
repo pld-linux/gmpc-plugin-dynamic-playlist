@@ -9,9 +9,11 @@ Source0:	http://bitbucket.org/misery/dynamic-playlist/downloads/%{source_name}-%
 # Source0-md5:	e47552a45376a52935e1f5c6add0e7d9
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_DYNAMIC_PLAYLIST
 BuildRequires:	cmake
+BuildRequires:	gettext-devel
 BuildRequires:	gmpc-devel >= 0.18.100
 BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libmpd-devel >= 0.18.100
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
